@@ -1,0 +1,2 @@
+= elections.each do |i|
+	%div #{i}

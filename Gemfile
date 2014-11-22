@@ -3,6 +3,8 @@ ruby '2.1.1'
 
 gem 'rails', '~> 4.1.6'
 
+gem 'shareable'
+
 #
 # PLATFORM SPECIFIC
 #

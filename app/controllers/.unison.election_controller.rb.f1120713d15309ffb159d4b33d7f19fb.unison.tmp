@@ -1,0 +1,10 @@
+class ElectionController < ApplicationController
+  skip_authorization_check
+  
+  def index
+	@elections = Election.all
+  end
+
+  def show_candidate_list
+  end
+end

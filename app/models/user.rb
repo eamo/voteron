@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
       includes(:oauth_cache).group_by {|a| a.provider }
     end
   end
+  
+  has_many :user_supports
 
   after_create :send_welcome_emails
 

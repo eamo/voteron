@@ -1,0 +1,8 @@
+- aa = []
+- @candidates.each do |i|
+  - i.standpoints.each do |j|
+    - aa << j.name
+
+%ul
+  - aa.uniq.each do |q|
+    %li= q

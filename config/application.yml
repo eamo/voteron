@@ -12,13 +12,13 @@ common: &common
   app_name: 'starterkit'
 
   social:
-    facebook: 'https://www.facebook.com/simple10'
+    facebook: 'https://www.facebook.com/engagethevote'
     twitter: 'https://twitter.com/joejohnston'
     google_plus: 'https://plus.google.com/+JoeJohnstonSF'
     linkedin: 'http://www.linkedin.com/in/startupjoe'
 
   contact:
-    email: 'eamonn.oloughlin@gmail.com.com'
+    email: 'eamonn.oloughlin@gmail.com'
     phone: '555-555-5555'
 
   session:
@@ -45,8 +45,8 @@ default_env: &default_env
   # See RobotsController.
   CANONICAL_HOST: 'rails4-starterkit.herokuapp.com'
 
-  AUTH_FACEBOOK_KEY: '201539556694091'
-  AUTH_FACEBOOK_SECRET: '80ae1dc93961b7f9a79265af0eeca698'
+  AUTH_FACEBOOK_KEY: '1558323191067966'
+  AUTH_FACEBOOK_SECRET: 'c97505faffdfa41b72f61129c2fd148c'
   AUTH_TWITTER_KEY: 'hbcu8JvAB1FftWw7c3oog'
   AUTH_TWITTER_SECRET: 'uTspycZ4T7QAeA9QLGBb1zoLrR6K7ChBPdYt8F7nZc'
 

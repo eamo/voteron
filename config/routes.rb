@@ -1,12 +1,22 @@
 # Route prefixes use a single letter to allow for vanity urls of two or more characters
 Rails.application.routes.draw do
+  get 'candidate/show_details'
+
+  get 'election/index'
+
+  get 'election/show_candidate_list'
+
+  
   if defined? Sidekiq
     require 'sidekiq/web'
     authenticate :user, lambda {|u| u.is_admin? } do
       mount Sidekiq::Web, at: '/admin/sidekiq/jobs', as: :sidekiq
     end
   end
-
+  
+  #map.elections '/elections', :controller => 'elections', :action => 'show_candidate_list'
+  get '/election/:id', to: 'election#show_candidate_list', as: 'elections'
+  
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin' if defined? RailsAdmin
 
   # Static pages

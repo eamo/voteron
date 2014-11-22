@@ -1,0 +1,6 @@
+- @elections.each do |i|
+  %ul
+    %li= button_to(i.name, '/election/'+i.id.to_s,:method => :get)
+    
+    
+    
