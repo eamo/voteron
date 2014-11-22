@@ -1,8 +1,14 @@
+Select the issues that you're interested in 
+
 - aa = []
 - @candidates.each do |i|
   - i.standpoints.each do |j|
     - aa << j.name
 
-%ul
-  - aa.uniq.each do |q|
-    %li= q
+
+- aa.uniq.each do |q|
+  = q
+  
+= button_to('Show me the Candidates', election_index_path,:method => :get)
+
+  
