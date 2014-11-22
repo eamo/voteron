@@ -1,6 +1,10 @@
+%b List of upcoming elections
+
+
 - @elections.each do |i|
-  %ul
-    %li= button_to(i.name, '/election/'+i.id.to_s,:method => :get)
+    %p
+        = button_to(i.name, '/election/'+i.id.to_s,:method => :get)
+        = time_ago_in_words(i.vote_date)
     
     
     

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   
   #map.elections '/elections', :controller => 'elections', :action => 'show_candidate_list'
   get '/election/:id', to: 'election#show_candidate_list', as: 'elections'
-  
+  get '/candidate/:id', to: 'candidate#show', as: 'candidate'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin' if defined? RailsAdmin
 
   # Static pages

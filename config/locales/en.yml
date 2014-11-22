@@ -26,11 +26,11 @@
 
 en:
   brand:
-    name: 'StarterKit'
+    name: 'voteron'
 
   emails:
     welcome:
-      subject: 'Welcome to StarterKit'
+      subject: 'Welcome to voteron'
 
   auth:
     login:

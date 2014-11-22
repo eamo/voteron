@@ -1,14 +1,21 @@
 Select the issues that you're interested in 
 
 - aa = []
+
 - @candidates.each do |i|
   - i.standpoints.each do |j|
     - aa << j.name
+    
+    
+- aa = aa.uniq
 
-
+%ul
 - aa.uniq.each do |q|
-  = q
-  
-= button_to('Show me the Candidates', election_index_path,:method => :get)
+  %p
+    %button.large{:class => q.gsub(" ", ""), :onclick => '$(search).val($(search).val() + "' + q + '" + \';\')'}= q
 
-  
+%p
+
+= form_tag elections_path, :method => 'get' do
+  = text_field_tag :search, params[:search], :value=> ''#, :hidden => true
+  = submit_tag "Update", :name => nil

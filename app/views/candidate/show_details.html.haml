@@ -1,2 +1,123 @@
-%h1 Candidate#show_details
-%p Find me in app/views/candidate/show_details.html.haml
+.row.clearfix
+  .col-md-12.column
+.row.clearfix
+  .col-md-8.column
+  .col-md-4.column
+.row.clearfix
+  .col-md-1.column
+  .col-md-3.column
+    %img.img-circle{:alt => "140x140", :src => "http://lorempixel.com/140/140/"}
+    = render_shareable :buttons=> ['facebook']
+  .col-md-4.column
+    %ul
+      %li
+        Name
+      %li
+        Political Party
+      %li
+        Constituency
+      %li
+        Position
+      %li
+        Email
+  .col-md-4.column
+    %ul
+      %li
+        Facebook
+      %li
+        Twitter
+      %li
+        Website
+      %li
+        Instagram
+      %li
+        Office Address
+.row.clearfix
+  .col-md-12.column
+    %h3
+      Stand Points
+    %table.table.table-striped
+      %thead
+        %tr
+          %th
+            \#
+          %th
+            Stand Point
+          %th
+            Status
+          %th
+            Vote
+      %tbody
+        %tr
+          %td
+            1
+          %td
+            Environmentally Focused
+          %td
+            99%
+          %td
+            %div{:class => ".btn-group-sm", :role => "group"}
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-up
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-down
+        %tr
+          %td
+            2
+          %td
+            Anti-Water Charges
+          %td
+            70%
+          %td
+            %div{:class => ".btn-group-sm", :role => "group"}
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-up
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-down
+        %tr
+          %td
+            3
+          %td
+            Rent Caps
+          %td
+            0%
+          %td
+            %div{:class => ".btn-group-sm", :role => "group"}
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-up
+              %button.btn.btn-default{:type => "button"}
+                .glyphicon.glyphicon-arrow-down
+.row.clearfix
+  .col-md-12.column
+    %h3
+      Commitments
+    %table.table
+      %thead
+        %tr
+          %th
+            \#
+          %th
+            Commitment
+          %th
+            Days to Go
+          %th
+            Status
+      %tbody
+        %tr.success
+          %td
+            1
+          %td
+            Build Hospital in Cork
+          %td
+            204
+          %td
+            .glyphicon.glyphicon-ok
+        %tr.warning
+          %td
+            1
+          %td
+            New Park
+          %td
+            0
+          %td
+            .glyphicon.glyphicon-remove
