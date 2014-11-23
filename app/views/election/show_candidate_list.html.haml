@@ -1,21 +1,38 @@
-Select the issues that you're interested in 
-
 - aa = []
 
 - @candidates.each do |i|
   - i.standpoints.each do |j|
     - aa << j.name
-    
-    
 - aa = aa.uniq
 
-%ul
-- aa.uniq.each do |q|
-  %p
-    %button.large{:class => q.gsub(" ", ""), :onclick => '$(search).val($(search).val() + "' + q + '" + \';\')'}= q
-
-%p
+.row.clearfix.text-center{:style => "margin-bottom: 15px;"}
+  %p.lead Select the issues that you're interested in 
+.row.clearfix
+  .col-md-2.column
+  .col-md-8.column.text-justify
+    %div.btn-group
+    - aa.uniq.each do |q|
+      %button.btn.large.btn-default{:style => "margin-bottom: 15px; margin-right: 10px", :class => q.gsub(" ", ""), :onclick => '$(search).val($(search).val() + "' + q + '" + \';\'); $(".' + q.gsub(" ", "") + '").addClass("btn-success")'}= q
+    .col-md-2.column
+   
+.row.clearfix
 
 = form_tag elections_path, :method => 'get' do
-  = text_field_tag :search, params[:search], :value=> ''#, :hidden => true
-  = submit_tag "Update", :name => nil
+  = text_field_tag :search, params[:search], :value=> '', :hidden => true
+  = submit_tag "Update", :name => nil 
+
+- if(@output.size > 0)
+  %table.table
+    %thead
+      %th
+        Name
+      %th
+        Overview
+      %th
+        \% match
+    %tbody
+      - @output.each do |i|
+        %tr
+          %td= link_to(@candidates.find(i[0]).name,@candidates.find(i[0]))
+          %td= @candidates.find(i[0]).overview
+          %td= i[1].to_s + '%'

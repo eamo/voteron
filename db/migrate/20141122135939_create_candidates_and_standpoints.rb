@@ -3,6 +3,7 @@ class CreateCandidatesAndStandpoints < ActiveRecord::Migration
     create_table :candidates do |t|
       t.string :name
       t.text :overview
+      t.string :pic_url
       t.integer :election_id
       t.timestamps
     end

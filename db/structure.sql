@@ -75,6 +75,7 @@ CREATE TABLE candidates (
     id integer NOT NULL,
     name character varying(255),
     overview text,
+    pic_url character varying(255),
     election_id integer,
     created_at timestamp without time zone,
     updated_at timestamp without time zone
